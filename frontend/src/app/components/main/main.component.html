@@ -1,1 +1,51 @@
-<p>main works!</p>
+<br><br><br><br>
+<div class="page-header">
+<h2 class="page-title">PERSON</h2>
+</div>
+<form class="active-pink-3 active-pink-4 mb-4">
+<div class="form-group" class="btn pull-right" >
+  <input type="text" name="searchstext" placeholder="search" [(ngModel)]="searchText">
+</div>
+<div class="btn pull-right" routerLink="/addPerson" >
+  <button type="button" class="btn btn-info">Add Person</button>
+  </div>
+</form>
+
+
+  <br>
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First_name</th>
+      <th scope="col">Last_name</th>
+      <th scope="col">Address</th>
+      <th scope="col">isActive</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of persons |filter:searchText   index as  i">
+      <td> {{ i + 1 }} </td>
+      <td> {{ person.first_name }}</td>
+      <td> {{ person.last_name }}</td>
+      <td> {{ person.address }}</td>
+      <td> {{ person.isActive }}</td>
+      <td>
+        <button type="button" (click)="deletePerson(person._id)"  class="btn btn-danger">Delete</button>
+      </td>
+
+      <td>
+
+        <button type="button" routerLink="/modifyPerson/{{person._id}}"  class="btn btn-success">Update</button>
+      </td>
+
+      </tr>
+      </tbody>
+</table>
+<br>
+
+
+

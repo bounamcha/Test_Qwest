@@ -52,19 +52,7 @@ deletePerson(id) {
   return this.http.delete(`http://localhost:3000/person.routes/remove/${id}`,  httpOptions);
 }
 
-findPerson(id) {
-  const token = localStorage.getItem(AppUtil.AUTH_TOKEN);
-  const httpOptions = {
-      headers: new HttpHeaders(
-          {
-            'Content-Type': 'application/json',
 
-            'Authorization':`Bearer ${token}`,
-          }
-      )
-  }
-  return this.http.delete(`http://localhost:3000/person.routes/find/${id}`,  httpOptions);
-}
 
 updatePerson(id) {
   const token = localStorage.getItem(AppUtil.AUTH_TOKEN);

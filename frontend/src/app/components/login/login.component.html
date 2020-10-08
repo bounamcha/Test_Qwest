@@ -1,1 +1,26 @@
-<p>login works!</p>
+<!-- Default form login -->
+<form (submit)="onLogin()" class="text-center border border-light p-5">
+  <br><br>
+    <p class="h4 mb-4">Sign in</p>
+
+    <!-- Email -->
+    <input type="email"  class="form-control mb-4" placeholder="E-mail"  name="email" [(ngModel)]="email">
+
+    <!-- Password -->
+    <input type="password"  class="form-control mb-4" placeholder="Password" name="password" [(ngModel)]="password">
+
+    <div class="d-flex justify-content-around">
+
+
+    </div>
+
+
+    <div class="control-group">
+
+      <button   class="btn btn-lg btn-primary  signup-btn"  type="submit">Sign in</button>
+    </div>
+
+
+
+  </form>
+  <!-- Default form login -->

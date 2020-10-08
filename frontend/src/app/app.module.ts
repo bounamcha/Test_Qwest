@@ -7,6 +7,7 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 import {UserService} from './services/user.service';
 import {PersonService} from './services/person.service';
 import { HashLocationStrategy, LocationStrategy} from '@angular/common';
+import { Ng2SearchPipeModule } from 'ng2-search-filter'
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -31,6 +32,7 @@ import { AddPersonComponent } from './components/add-person/add-person.component
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    Ng2SearchPipeModule,
     FlashMessagesModule.forRoot()
   ],
   providers: [
