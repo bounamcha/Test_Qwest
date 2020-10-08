@@ -8,7 +8,7 @@ const Person = require('../models/person.js');
 //------------------add--------------------//
 router.post('/add',passport.authenticate('jwt', { session: false }), (req,res)=>{
   let person = new Person ({
-     first_name: req.body.fisrt_name,
+     first_name: req.body.first_name,
      last_name: req.body.last_name,
      address: req.body.address,
      isActive: req.body.isActive
@@ -42,7 +42,7 @@ router.post('/add',passport.authenticate('jwt', { session: false }), (req,res)=>
 //------------------list--------------------//
 router.post('/list', passport.authenticate('jwt', { session: false }),(req,res)=>{
        const owner= req.body.last_name;
-        Person.findOne({owner}, (err,person)=>{
+        Person.find({owner}, (err,person)=>{
         
          if(err){
            return res.json({
@@ -78,8 +78,8 @@ router.delete('/remove/:id', passport.authenticate('jwt', { session: false }),(r
 
 //------------------update-----------------//
 router.put('/update/:id', (req,res) => {
-    Person.findOneAndUpdate({_id: req.params.id} , req.body).then(rec => {
-      if (rec) {
+    Person.findOneAndUpdate({_id: req.params.id} , req.body).then(res => {
+      if (res) {
         
         res.status(200).json({ message :"update success"});
         

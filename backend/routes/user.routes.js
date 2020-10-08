@@ -54,7 +54,7 @@ router.post('/login', (req,res,next) =>  {
   })
 })
 })
-
+ 
 router.post('/register', (req,res,next) => {
   
     let newuser = new User({
@@ -62,7 +62,7 @@ router.post('/register', (req,res,next) => {
        last_name: req.body.last_name,
        email: req.body.email,
        password: req.body.password,
-       adresse: req.body.adresse
+       address: req.body.address
    });
 console.log(newuser);
 newuser.save((err, user) => {
