@@ -16,6 +16,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { MainComponent } from './components/main/main.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AddPersonComponent } from './components/add-person/add-person.component';
+import { UpdatePersonComponent } from './components/update-person/update-person.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { AddPersonComponent } from './components/add-person/add-person.component
     RegisterComponent,
     MainComponent,
     NavbarComponent,
-    AddPersonComponent
+    AddPersonComponent,
+    UpdatePersonComponent
+
   ],
   imports: [
     BrowserModule,

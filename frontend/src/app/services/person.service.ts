@@ -21,7 +21,7 @@ savePerson(user) {
           }
       )
   }
-  return this.http.post('http://localhost:3000/person.routes/add', user, httpOptions);
+  return this.http.post('http://localhost:8080/person.routes/add', user, httpOptions);
 }
 
 getPerson(query) {
@@ -35,7 +35,7 @@ getPerson(query) {
           }
       )
   }
-  return this.http.post('http://localhost:3000/person.routes/list', query,  httpOptions)
+  return this.http.post('http://localhost:8080/person.routes/list', query,  httpOptions)
 }
 
 deletePerson(id) {
@@ -49,7 +49,7 @@ deletePerson(id) {
           }
       )
   }
-  return this.http.delete(`http://localhost:3000/person.routes/remove/${id}`,  httpOptions);
+  return this.http.delete(`http://localhost:8080/person.routes/remove/${id}`,  httpOptions);
 }
 
 
@@ -65,6 +65,6 @@ updatePerson(id) {
           }
       )
   }
-  return this.http.put(`http://localhost:3000/person.routes/update/${id}`, httpOptions);
+  return this.http.put(`http://localhost:8080/person.routes/update/${id}`, httpOptions);
 }
 }

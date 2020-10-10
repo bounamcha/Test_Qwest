@@ -11,12 +11,12 @@ export class UserService {
 
 
   createAccount(user) {
-    return this.http.post('http://localhost:3000/user.routes/register', user , {headers : {"content-type":"application/json"}})
+    return this.http.post('http://localhost:8080/user.routes/register', user , {headers : {"content-type":"application/json"}})
   // .pipe(map((res: Response) => res.json()));
   }
 
     login(user) {
-    return this.http.post('http://localhost:3000/user.routes/login', user , {headers : {"content-type":"application/json"}})
+    return this.http.post('http://localhost:8080/user.routes/login', user , {headers : {"content-type":"application/json"}})
   // .pipe(map((res: Response) => res.json()));
   }
 

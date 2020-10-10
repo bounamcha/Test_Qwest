@@ -14,7 +14,7 @@ export class MainComponent implements OnInit {
 
   persons: any ;
   searchText;
-
+  
   constructor(
     private flashMessage: FlashMessagesService,
     private userService: UserService,

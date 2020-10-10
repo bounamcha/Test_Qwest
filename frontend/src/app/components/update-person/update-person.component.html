@@ -1,0 +1,33 @@
+<!-- Default form login -->
+<form  (submit)="onModifyPerson()" class="text-center border border-light p-5">
+  <br><br>
+    <p class="h4 mb-4">Sign in</p>
+
+    <!-- first_name -->
+    <input type="text"  class="form-control mb-4" placeholder="fisrt-name"  name="first_name" [(ngModel)]="first_name">
+
+    <!-- last_name -->
+    <input type="text"  class="form-control mb-4" placeholder="last_name" name="last_name" [(ngModel)]="last_name">
+
+    <!-- Address -->
+   <input type="text"  class="form-control mb-4" placeholder="Address"  name="address" [(ngModel)]="address">
+
+   <!-- isActive -->
+   <input type="text"  class="form-control mb-4" placeholder="isActive" name="isActive" [(ngModel)]="isActive">
+
+
+    <div class="d-flex justify-content-around">
+
+
+    </div>
+
+
+    <div class="control-group">
+
+      <button   class="btn btn-lg btn-primary  signup-btn"  type="submit">Sign in</button>
+    </div>
+
+
+
+  </form>
+  <!-- Default form login -->
