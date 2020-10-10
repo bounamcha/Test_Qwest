@@ -9,7 +9,6 @@ export class PersonService {
 
   constructor(private http: HttpClient) { }
 
-
 savePerson(user) {
   const token = localStorage.getItem(AppUtil.AUTH_TOKEN);
   const httpOptions = {
