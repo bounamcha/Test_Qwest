@@ -46,6 +46,7 @@ deletePerson(id) {
 
             'Authorization':`Bearer ${token}`,
           }
+
       )
   }
   return this.http.delete(`http://localhost:8080/person.routes/remove/${id}`,  httpOptions);
